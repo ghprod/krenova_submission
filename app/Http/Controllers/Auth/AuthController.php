@@ -73,9 +73,12 @@ class AuthController extends Controller
         return view('login');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
         session(['user' => null]);
+
+        if( $next = $request->input('next') )
+            return redirect($next);
 
         return redirect('auth/login');
     }
