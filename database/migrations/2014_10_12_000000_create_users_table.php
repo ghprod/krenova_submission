@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('fb_nickname')->nullable();
             $table->string('tw_id')->nullable();
             $table->string('tw_nickname')->nullable();
+            $table->string('github_id')->nullable();
+            $table->string('github_nickname')->nullable();
             $table->string('avatar')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();

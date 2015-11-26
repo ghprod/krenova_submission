@@ -125,4 +125,20 @@ class AuthController extends Controller
         session(['user' => $user]);
         return redirect('submission/create');
     }
+
+    public function githubCallback(Request $request)
+    {
+        $githubData = Socialite::driver('github')->user();
+        $user   = User::firstOrCreate([
+            'github_id'         => $githubData->id,
+            'github_nickname'   => $githubData->nickname,
+            'email'             => $githubData->email,
+            'name'              => $githubData->name,
+            'avatar'            => $githubData->avatar,
+        ]);
+        $user->save();
+
+        session(['user' => $user]);
+        return redirect('submission/create');
+    }
 }

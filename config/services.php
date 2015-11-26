@@ -45,5 +45,10 @@ return [
         'client_secret' => env('TW_SECRET_ID'),
         'redirect'      => env('TW_REDIRECT_URL'),
     ],
+    'github' => [
+        'client_id'     => env('GITHUB_APP_ID'),
+        'client_secret' => env('GITHUB_SECRET_ID'),
+        'redirect'      => env('GITHUB_REDIRECT_URL'),
+    ],
 
 ];

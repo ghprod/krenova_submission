@@ -18,6 +18,7 @@ Route::get('auth/logout', 'Auth\AuthController@logout');
 Route::get('auth/{provider}', 'Auth\AuthController@socialLogin');
 Route::get('auth/facebook/callback', 'Auth\AuthController@facebookCallback');
 Route::get('auth/twitter/callback', 'Auth\AuthController@twitterCallback');
+Route::get('auth/github/callback', 'Auth\AuthController@githubCallback');
 
 Route::get('/', 'SubmissionController@index');
 Route::get('submission', 'SubmissionController@index');
