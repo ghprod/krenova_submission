@@ -29,10 +29,8 @@ class SubmissionController extends Controller
      */
     public function create()
     {
-        if( !session('user') )
+        if(! $userData = session('user') )
             return redirect('auth/login');
-
-        $userData = session('user');
 
         return view('submission/new', ['userData' => $userData]);   
     }
