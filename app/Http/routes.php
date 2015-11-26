@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('auth/login', 'Auth\AuthController@login');
 Route::get('auth/logout', 'Auth\AuthController@logout');
@@ -22,6 +19,7 @@ Route::get('auth/{provider}', 'Auth\AuthController@socialLogin');
 Route::get('auth/facebook/callback', 'Auth\AuthController@facebookCallback');
 Route::get('auth/twitter/callback', 'Auth\AuthController@twitterCallback');
 
+Route::get('/', 'SubmissionController@index');
 Route::get('submission', 'SubmissionController@index');
 Route::get('submission/create', 'SubmissionController@create');
 Route::post('submission/create', 'SubmissionController@store');
