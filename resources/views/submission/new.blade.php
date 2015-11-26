@@ -17,12 +17,19 @@
             <form method="post">
                 <h1>Pengirim Cerita</h1>
                 <div class="form-group">
-                    @if($userData->tw_nickname)
-                        <a class="btn btn-lg bg-light-blue btn-social" href="https://twitter.com/{{$userData->tw_nickname}}"><i class="fa fa-twitter"></i> <span>{{'@'.$userData->tw_nickname}}</span></a>
-                    @elseif($userData->fb_nickname)
-                        <a class="btn btn-lg bg-blue btn-social" href="http://facebook.com/{{$userData->fb_nickname}}"><i class="fa fa-facebook"></i> <span>{{$userData->name}}</span></a>
-                    @endif
+                    <div style="width:200px;height:200px;overflow:hidden;border-radius:50%;text-align:center;vertical-align:middle;float:left;">
+                        <img src="{{$userData->avatar}}" width="200" />
+                    </div>
+                    <div style="float:left;">
+                        @if($userData->tw_nickname)
+                            <a class="btn btn-lg bg-light-blue btn-social" href="https://twitter.com/{{$userData->tw_nickname}}"><i class="fa fa-twitter"></i> <span>{{'@'.$userData->tw_nickname}}</span></a>
+                        @elseif($userData->fb_nickname)
+                            <a class="btn btn-lg bg-blue btn-social" href="http://facebook.com/{{$userData->fb_nickname}}"><i class="fa fa-facebook"></i> <span>{{$userData->name}}</span></a>
+                        @endif
+                    </div>
+                    <div style="clear:both;"></div>
                 </div>
+                <hr/>
                 <div class="form-group">
                     <label for="my_name">Nama*</label>
                     <input type="text" class="form-control" id="my_name" placeholder="Nama" value="{{$userData->name}}" disabled>
