@@ -1,3 +1,6 @@
+body {
+  background: #fafafa;
+}
 .btn.btn-social {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -125,5 +128,30 @@
   color: #932ab6 !important;
 }
 .text-maroon {
-  color: #85144b !important;
+    color: #85144b !important;
+}
+
+.modal {
+    position: fixed;
+    z-index: 99999;
+}
+.submit_float {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 10%;
+    margin-bottom: 150px;
+    z-index: 900;
+}
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
