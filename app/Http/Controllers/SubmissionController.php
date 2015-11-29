@@ -46,6 +46,14 @@ class SubmissionController extends Controller
         if( !session('user') )
             return redirect('auth/login');
 
+        $messages = [
+            'my_phone.required'         => 'Nomor HP pengirim cerita wajib diisi!',
+            'creator_name.required'     => 'Nama Kreator / Inovator wajib diisi!',
+            'creator_phone.required'    => 'Nomor HP Kreator / Inovator wajib diisi!',
+            'districts.required'        => 'Kecamatan wajib diisi!',
+            'product.required'          => 'Nama Karya / Produk wajib diisi!'
+        ];
+
         $validator = Validator::make($request->all(), [
             'my_phone'      => 'required|max:12',
             'creator_name'  => 'required',
@@ -53,7 +61,7 @@ class SubmissionController extends Controller
             'creator_name'  => 'required',
             'districts'     => 'required',
             'product'       => 'required',
-        ]);
+        ], $messages);
 
         if ($validator->fails()) {
             return redirect('submission/create')
