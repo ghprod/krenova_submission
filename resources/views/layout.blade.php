@@ -17,11 +17,14 @@
         <link rel="stylesheet" href="{{url('assets/css/style.css')}}" type="text/css">
     </head>
     <body>
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color-text--grey-600">
-            <div class="container">
-                <div class="page-content">@yield('content')</div>
-            </div>
+        <div class="container">
+            <div class="page-content">@yield('content')</div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">Aplikasi dikembangkan oleh <a href="http://www.gedrix.com" target="_blank">gedrixCreative</a>.</p>
+            </div>
+        </footer>
         <script src="//cdn-ck.gedrix.net/assets/js/jquery.js"></script>
         <script src="//cdn-ck.gedrix.net/assets/js/bootstrap.min.js"></script>
         @yield('bottom_js')
