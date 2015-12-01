@@ -1,5 +1,13 @@
 body {
-  background: #fafafa;
+  font-family: "Roboto";
+  margin-top: 5%;
+  background : #fafafa url('../images/bawor.png') fixed no-repeat bottom right;
+}
+.clearfix {clear: both;}
+.content {
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 10px;
 }
 .btn.btn-social {
   -webkit-box-shadow: none;

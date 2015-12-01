@@ -3,15 +3,13 @@
 @section('title', 'Masuk')
 
 @section('content')
-    <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col" align="center" style="margin:auto;">
-            <h3>Masuk</h3>
-            <a class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect bg-blue btn-social" href="{{url('auth/facebook')}}"><i class="fa fa-facebook"></i> | <span>Masuk lewat Facebook</span></a>
-            <br/><br/>
-            <a class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect bg-light-blue btn-social" href="{{url('auth/twitter')}}"><i class="fa fa-twitter"></i> | <span>Masuk lewat Twitter</span></a>
-            <br/><br/>
-            <h3>Kamu geek banget?</h3>
-            <a class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect bg-black btn-social" href="{{url('auth/github')}}"><i class="fa fa-github"></i> | <span>Masuk lewat Github</span></a>
-        </div>
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3 content" align="center">
+        <h1>Formulir Peserta Festival Krenova</h1>
+        <hr/>
+        <a class="btn btn-lg bg-blue btn-social" href="{{url('auth/facebook')}}"><i class="fa fa-facebook"></i><span>Masuk lewat Facebook</span></a>
+        <br/><br/>
+        <a class="btn btn-lg bg-light-blue btn-social" href="{{url('auth/twitter')}}"><i class="fa fa-twitter"></i><span>Masuk lewat Twitter</span></a>
     </div>
+</div>
 @endsection
